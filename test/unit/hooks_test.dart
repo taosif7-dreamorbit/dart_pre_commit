@@ -42,6 +42,8 @@ void main() {
   Hooks createSut({
     bool continueOnRejected = false,
     String? configFile,
+    String? dartBin = 'dart',
+    String? flutterBin = 'flutter',
   }) =>
       Hooks(
         fileResolver: mockResolver,
@@ -52,6 +54,8 @@ void main() {
         config: HooksConfig(
           continueOnRejected: continueOnRejected,
           configFile: configFile,
+          dartBin: dartBin,
+          flutterBin: flutterBin,
         ),
       );
 

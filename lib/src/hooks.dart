@@ -53,6 +53,18 @@ class HooksConfig with _$HooksConfig {
     /// contains the configuration as root level elements (without the
     /// `dart_pre_commit`).
     String? configFile,
+
+    /// Specifies the path to flutter binary for use.
+    ///
+    /// Helpful in cases when you want to use fvm or other flutter binary
+    /// use fvm as: `fvm flutter`
+    @Default('flutter') String? flutterBin,
+
+    /// Specifies the path to dart binary for use.
+    ///
+    /// Helpful in cases when you want to use fvm or other dart binary
+    /// use fvm as: `fvm dart`
+    @Default('dart') String? dartBin,
   }) = _HooksConfig;
 }
 
